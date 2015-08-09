@@ -2,7 +2,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 # SQLAlchemy stuff
-from database_setup import Base, Person
+#from database_setup import Base, Person <--- Import your tables here!!
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 engine = create_engine('sqlite:///crudlab.db')
