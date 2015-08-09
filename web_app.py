@@ -2,6 +2,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 # SQLAlchemy stuff
+
 #from database_setup import Base, Person <--- Import your tables here!!
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -13,6 +14,7 @@ session = DBSession()
 
 
 #YOUR WEB APP CODE GOES HERE
+
 @app.route("/result/<int:person_id>/<int:result>", methods=['POST'])
 def result(person_id, result):
 	user = session.query(Person).filter_by(id=person_id).first()
