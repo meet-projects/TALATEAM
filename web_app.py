@@ -12,3 +12,13 @@ session = DBSession()
 
 
 #YOUR WEB APP CODE GOES HERE
+
+
+
+
+
+
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
