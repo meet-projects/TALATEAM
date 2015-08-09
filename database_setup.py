@@ -5,5 +5,7 @@ from sqlalchemy import create_engine
 
 Base = declarative_base()
 
+
+
 #PLACE YOUR TABLE SETUP INFORMATION HERE
 
