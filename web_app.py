@@ -22,12 +22,18 @@ def main():
 
 @app.route('/profiles/<int:profile_id>')
 def viewProfile(profile_id):
-		
 	user = session.query(User).filter_by(id = profile_id).first()
-	#Get the Question for that user	
-	return render_template('profile.html')
+	question = session.query(Question).filter_by(id = 1).first()
+	if request.method == 'GET':
+		return render_template('takeQuiz.html', question = question, user = user)	
+	elif request.method == 'POST':
+		form_response = request.form['options']
+		if form_response == question.correct_answer:
+			return render_template('correctAnswer.html')
+		else:
+			return render_template('incorrectAnswer.html')
 
-@app.route
+
 
 if __name__ == '__main__':
     app.run(debug=True)
