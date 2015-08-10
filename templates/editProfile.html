@@ -1,0 +1,26 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+<form method = 'POST'>
+
+Name:<input type='text' name = 'name' value = "{{user.name}}"></br>
+Paste your picture here:<input type ='text' value = "{{user.picURL}}" name = 'picURL'></br>
+Tell us about yourself: <input type = 'textarea' rows="4" cols="50" value = "{{user.description }}" name = 'description'>
+
+
+<input type = 'submit' value = "Submit">
+
+</form>
+
+
+<a href= "{{url_for('deleteProfile', profile_id = user.id)}}">Delete Profile</a>
+
+</body>
+<a href = "{{url_for('main')}}">Cancel</a>
+
+</html>
