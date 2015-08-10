@@ -1,10 +1,12 @@
 <html>
 <head>
+<body background="background.jpeg">
+
 <title>RANDOM profile</title>
 </head>
 <body>
 <h1 id = "mainh"> Time To Vote </h1>
-<img src="http://www.newschool.edu/uploadedImages/Parsons/Profiles/jamer_hunt_profile.jpg?n=4468" alt="person">
+<img class="REPLACEMENT-PIC" src="http://www.newschool.edu/uploadedImages/Parsons/Profiles/jamer_hunt_profile.jpg?n=4468" alt="person">
 <br>
 <form action="POST">
 <p> {{ question.text }} </p> <br>
@@ -13,6 +15,7 @@
 <input type="radio" name="answer" value="{{question.option_b}}">question.option_b<br>
 <input type="radio" name="answer" value="{{question.option_c}}">question.option_c<br>
 <input type="radio" name="answer" value="{{question.option_d}}">question.option_d<br>
+
 
 <input type="submit" value="Check">
 
