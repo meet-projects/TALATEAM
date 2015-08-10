@@ -22,6 +22,7 @@ class User(Base):
 	description = Column(String)
 	#username = Column(String)
 	#password = Column(String)
+	
 
 class Question(Base):
 	option_a = Column(String)

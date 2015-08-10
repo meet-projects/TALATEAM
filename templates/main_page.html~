@@ -15,7 +15,7 @@
 
 
 {% for user in users %}
-<div 
+<div> 
 <a href= "profile.html">
 <img src="{{user.picURL}}">
 </a>
