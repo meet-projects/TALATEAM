@@ -24,8 +24,9 @@ def result(user_id, result):
 @app.route("/profile/<int:user_id>/", methods=["GET", 'POST'])
 def profilePage(user_id):
 	user = session.query(User).filter_by(id=user_id).first()
+	question=session.query(Question).filter_by(user_id=user.id).first()
 	if request.method == 'GET':
-		return render_template("profile.html", user=user)
+		return render_template("profile.html", user=user, question=question)
 	else:
 		pass
 		

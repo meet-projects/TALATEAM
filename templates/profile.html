@@ -7,16 +7,13 @@
 <img src="http://www.newschool.edu/uploadedImages/Parsons/Profiles/jamer_hunt_profile.jpg?n=4468" alt="person">
 <br>
 <form action="POST">
-<p> {{ user.question }} </p> <br>
+<p> {{ question.text }} </p> <br>
 
-<input type="radio" name="job" value=" Professor">Professor<br>
-<input type="radio" name="job" value="Doctor">Doctor<br>
+<input type="radio" name="answer" value="{{question.option_a}}">question.option_a<br>
+<input type="radio" name="answer" value="{{question.option_b}}">question.option_b<br>
+<input type="radio" name="answer" value="{{question.option_c}}">question.option_c<br>
+<input type="radio" name="answer" value="{{question.option_d}}">question.option_d<br>
 
-<input type="radio" name="job" value="Football Player" checked>Football Player<br>
-
-
-<input type="radio" name="job" value="Teacher">Teacher<br>
-<input type="radio" name="job" value="Priest">Priest<br><br><br>
 <input type="submit" value="Check">
 
 
