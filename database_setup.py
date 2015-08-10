@@ -25,6 +25,7 @@ class User(Base):
 	
 
 class Question(Base):
+	__tablename__ = 'question'
 	option_a = Column(String)
 	option_b = Column(String)
 	option_c = Column(String)
