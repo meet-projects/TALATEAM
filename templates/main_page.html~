@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+   TALATEAM/meet-projects
+  </title>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='main_page.css') }}">
+  
+  
+</head>
+
+<body>
+<h3 id = "one"> Most rated wrong:</h3>  
+<h3 id= "two">Recent uploads: </h3>
+
+
+<div class = "REPLACEMENT-PIC">
+
+
+<a href="profile">
+  <img src="http://www.newschool.edu/uploadedImages/Parsons/Profiles/jamer_hunt_profile.jpg?n=4468" alt="Profile Pic" style="width:400px;height:300px;border:0;">
+</a>
+</div>
+
+<a href="profile">
+<img src="http://www.workforce.com/ext/resources/PEOPLE-MOVES-Andy-Roane.jpeg" alt="Profile Pic" style="width:400px;height:300px;border:0;">
+</a>
+</div>
+
+</body>
+
+
+</html>

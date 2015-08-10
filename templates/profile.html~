@@ -7,7 +7,7 @@
 <img src="http://www.newschool.edu/uploadedImages/Parsons/Profiles/jamer_hunt_profile.jpg?n=4468" alt="person">
 <br>
 <form action="POST">
-<p> {{ user.question }} </p> <br>
+<p> What do I do for a living? </p> <br>
 
 <input type="radio" name="job" value=" Professor">Professor<br>
 <input type="radio" name="job" value="Doctor">Doctor<br>
