@@ -14,15 +14,19 @@
 <h3 id= "two">Recent uploads: </h3>
 
 
+<a href = "{{url_for('makeANewProfile')}}">Make A New Profile</a>
+
 {% for user in users %}
 <div> 
-<a href= "profile.html">
+<a href= "{{url_for('viewProfile', profile_id = user.id)}}">
 <img src="{{user.picURL}}">
 </a>
 </div>
 {% endfor %} 
 
 
+
+<p>psssst....there's a secret administration page <a href = "{{url_for('showProfiles')}}">here</a>
 </body>
 
 
