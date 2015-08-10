@@ -33,7 +33,7 @@ def viewProfile(profile_id):
 		else:
 			return render_template('incorrectAnswer.html')
 
-@app.route('/profile/new' methods = ['GET', 'POST'])
+@app.route('/profile/new', methods = ['GET', 'POST'])
 def makeANewProfile():
 	if request.method == 'GET':
 		render_template('newProfile.html')
