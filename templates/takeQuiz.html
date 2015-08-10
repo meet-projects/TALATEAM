@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>RANDOM profile</title>
+</head>
+<body>
+<h1 id = "mainh"> Time To Vote </h1>
+<img src="{{user.picURL}}" alt="person">
+<br>
+<form action = "{{url_for('viewProfile',profile_id = user.id)}}"method = "POST">
+<p> What does this person do for a living? </p> <br>
+
+<input type="radio" name="answer" value="{{question.option_a}}">{{question.option_a}}<br>
+<input type="radio" name="answer" value="{{question.option_b}}">{{question.option_b}}<br>
+<input type="radio" name="answer" value="{{question.option_c}}">{{question.option_c}}<br>
+<input type="radio" name="answer" value="{{question.option_d}}">{{question.option_d}}<br>
+
+<input type="submit" value="Check">
+
+
+</form>
+
+
+<a href = "{{url_for('main')}}">Cancel</a>
+
+</body>
