@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>RANDOM profile</title>
+</head>
+<body>
+<h1 id = "mainh"> Time To Vote </h1>
+<img src="http://www.newschool.edu/uploadedImages/Parsons/Profiles/jamer_hunt_profile.jpg?n=4468" alt="person">
+<br>
+<form action="POST">
+<p> What do I do for a living? </p> <br>
+
+<input type="radio" name="job" value=" Professor">Professor<br>
+<input type="radio" name="job" value="Doctor">Doctor<br>
+
+<input type="radio" name="job" value="Football Player" checked>Football Player<br>
+
+
+<input type="radio" name="job" value="Teacher">Teacher<br>
+<input type="radio" name="job" value="Priest">Priest<br><br><br>
+<input type="submit" value="Check">
+
+
+</form>
+</body>

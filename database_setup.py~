@@ -19,6 +19,7 @@ class User(Base):
 	name = Column(String)
 	id = Column(Integer, primary_key=True)
 	picURL = Column(String)
+	description = Column(String)
 	#username = Column(String)
 	#password = Column(String)
 

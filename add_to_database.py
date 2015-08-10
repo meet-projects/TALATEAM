@@ -15,8 +15,10 @@ session = DBSession()
 
 Miley = User(
 	name = "Miley Cyrus",
+	id = 1,
 	picURL = "http://cdni.condenast.co.uk/592x888/k_n/miley-cyrus_31jan14_getty_b_592x888.jpg",
-	id = 1
+	description = "description here"
+	
 	)
 job = Question(
 	option_a = "Teacher",
@@ -32,8 +34,9 @@ job = Question(
 
 Emraan = User(
 	name = "Emraan Joe",
+	id = 2,
 	picURL = "http://www.iluvcinema.in/hindi/wp-content/uploads/2014/08/Emraan-is-a-very-cool-person-Kay-Kay.jpg",
-	id = 2
+	description = "description here"
 	)
 job = Question(
 	option_a = "Teacher",
@@ -49,8 +52,9 @@ job = Question(
 
 David = User(
 	name = "David Goliath",
+	id = 3,
 	picURL = "https://www.uiaa.org/calendar/viewphoto.asp?id=14237",
-	id = 3
+	description = "description here"
 	)
 job = Question(
 	option_a = "Teacher",
@@ -66,8 +70,9 @@ job = Question(
 
 Joey = User(
 	name = "Joey Green",
+	id = 4,
 	picURL = "http://usercontent2.hubimg.com/7505671_f260.jpg",
-	id = 3
+	description = "description here"
 	)
 job = Question(
 	option_a = "Teacher",
