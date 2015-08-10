@@ -20,7 +20,7 @@ def main():
 	all_users = session.query(User).all()
 	return render_template('main_page.html', users=all_users)
 
-@app.route('/profiles/<int:profile_id>' methods = ['GET', 'POST'])
+@app.route('/profiles/<int:profile_id>', methods = ['GET', 'POST'])
 def viewProfile(profile_id):
 	user = session.query(User).filter_by(id = profile_id).first()
 	question = session.query(Question).filter_by(id = 1).first()
@@ -40,10 +40,15 @@ def makeANewProfile():
 	elif request.method == 'POST':
 		name = request.form['name']
 		pic = request.form['picURL']
-		desciption = request.form['description']
+		description = request.form['description']
+		
 		newUser = User(name =  name, picURL = pic, description = description)
 		session.add(newUser)	
 		session.commit()
+		question = Question( user_id = newUser.id, question = "What do you do for a living?" option_a = request.form['option1'], option_b = request.form['option2'],option_c = request.form['option3'], option_d = request.form['option4'], correct_answer = request.form['option1'])
+		session.add(question)
+		sesson.commit()
+		return redirect(url_for('main'))
 
 
 if __name__ == '__main__':
