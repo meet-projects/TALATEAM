@@ -20,18 +20,32 @@ def main():
 	all_users = session.query(User).all()
 	return render_template('main_page.html', users=all_users)
 
-@app.route('/profiles/<int:profile_id>', methods = ['GET', 'POST'])
-def viewProfile(profile_id):
-	user = session.query(User).filter_by(id = profile_id).first()
-	question = session.query(Question).filter_by(id = 1).first()
+@app.route('/profiles/<int:user_id>', methods = ['GET', 'POST'])
+def viewProfile(user_id):
+	user = session.query(User).filter_by(id = user_id).first()
+	question = session.query(Question).filter_by(user_id = user_id ).first()
 	if request.method == 'GET':
 		return render_template('takeQuiz.html', question = question, user = user)	
 	elif request.method == 'POST':
 		form_response = request.form['answer']
+
+		ans = request.form['answer']
+		if ans == 'a':
+			question.counter_a += 1
+		elif ans == 'b':
+			question.counter_b += 1
+		elif ans == 'c':
+			question.counter_c += 1
+		elif ans == 'd':
+			question.counter_d += 1
+		session.commit()
+
+
 		if form_response == question.correct_option:
-			return render_template('correctAnswer.html', user = user, question = question)
+			return render_template('correctAnswer.html', user = user, question = question, counter_a= question.counter_a, 				counter_b= question.counter_b, counter_c= question.counter_c, counter_d= question.counter_d)
 		else:
-			return render_template('incorrectAnswer.html', user = user, question = question)
+			return render_template('incorrectAnswer.html', user = user, question = question, counter_a= question.counter_a, 				counter_b= question.counter_b, counter_c= question.counter_c, counter_d= question.counter_d)
+			
 
 @app.route('/profile/new', methods = ['GET', 'POST'])
 def makeANewProfile():
@@ -58,13 +72,23 @@ def showProfiles():
 @app.route('/secret/<int:profile_id>/edit', methods = ['GET', 'POST'])
 def editProfile(profile_id):
 	user = session.query(User).filter_by(id = profile_id).first()
-	#question = session.query(Question).filter_by(user_id = profile_id).first()
+	question = session.query(Question).filter_by(user_id = profile_id).first()
 	if request.method == 'GET':
 		return render_template('editProfile.html', user = user)
 	elif request.method == 'POST':
 		user.name = request.form['name']
 		pic = request.form['picURL']
 		description = request.form['description']
+		ans = request.form['answer']
+		if ans == 'a':
+			question.counter_a += 1
+		elif ans == 'b':
+			question.counter_b += 1
+		elif ans == 'c':
+			question.counter_c += 1
+		elif ans == 'd':
+			question.counter_d += 1
+		session.commit()	
 		#question.option_a = request.form['option1']
 		#question.option_b = request.form['option2']
 		#question.option_c = request.form['option3']
@@ -72,6 +96,7 @@ def editProfile(profile_id):
 		#question.correct_option = request.form['option1']
 		session.commit()
 		return redirect(url_for('showProfiles'))
+		
 
 
 @app.route('/secret/<int:profile_id>/delete', methods = ['GET', 'POST'])
