@@ -16,28 +16,29 @@ Base = declarative_base()
 	
 class User(Base):
 	__tablename__ = 'user'
-	name = User.name
+	name = Column(String)
 	id = Column(Integer, primary_key=True)
-	picURL = User.picURL
-	username = Column(string)
-	password = Column(string)
+	picURL = Column(String)
+	#username = Column(String)
+	#password = Column(String)
 
 class Question(Base):
-	option_a = Column(string)
-	option_b = Column(string)
-	option_c = Column(string)
-	option_d = Column(string)
-	text = Column(string)
+	option_a = Column(String)
+	option_b = Column(String)
+	option_c = Column(String)
+	option_d = Column(String)
+	text = Column(String)
 	correct_option = Column(String) 
-	Question_id = Coluomn(Integer, primary_key = True)
-	user_id = User.id
+	id = Column(Integer, primary_key = True)
+	user_id = Column(Integer, ForeignKey("user.id"))
+	user = relationship(User)
 
-class Q_response(Base):
-	option_a = 0
-	option_b = 0
-	option_c = 0	
-	option_d = 0
-	Q_response_id = Column(Integer, prinamry_key = True)
+##class Q_response(Base):
+	##counter_a = 0
+	##option_b = 0
+	##option_c = 0	
+	##option_d = 0
+	##Q_response_id = Column(Integer, primary_key = True)
 
 
 #PLACE YOUR TABLE SETUP INFORMATION HERE
