@@ -28,7 +28,7 @@ def profilePage(user_id):
 	if request.method == 'GET':
 		return render_template("profile.html", user=user, question=question)
 	else:
-		pass
+		request.method == 'POST' 
 		
 	
 
