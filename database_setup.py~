@@ -35,13 +35,11 @@ class Question(Base):
 	id = Column(Integer, primary_key = True)
 	user_id = Column(Integer, ForeignKey("user.id"))
 	user = relationship(User)
-
-##class Q_response(Base):
-	##counter_a = 0
-	##option_b = 0
-	##option_c = 0	
-	##option_d = 0
-	##Q_response_id = Column(Integer, primary_key = True)
+	counter_a = Column(Integer)
+	counter_b = Column(Integer)
+	counter_c = Column(Integer)	
+	counter_d = Column(Integer)
+	
 
 
 #PLACE YOUR TABLE SETUP INFORMATION HERE
