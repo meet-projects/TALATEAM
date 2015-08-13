@@ -1,26 +1,29 @@
 <html>
 
 <head>
-
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='newProfile.css')}}">
 </head>
 
 <body>
-
+<h1> Make A New Profile!</h1><br>
 <form method = 'POST' action="{{url_for('makeANewProfile')}}">
+<center>
+Name:<input type='text' name = 'name' class="Inputs"></br><br>
+Paste your picture here:<input type ='text' name = 'picURL' class="Inputs"></br><br>
+Tell us about yourself: <input type = 'textarea' rows="4" cols="50" name = 'description' class="Inputs"><br>
 
-Name:<input type='text' name = 'name'></br>
-Paste your picture here:<input type ='text' name = 'picURL'></br>
-Tell us about yourself: <input type = 'textarea' rows="4" cols="50" name = 'description'>
 <h2>What do you do for a living?</h2>
 <input type = 'text' name = 'option1'>
+</form>
+<form2>
 <h3> Please provide 3 other occupations </h3>
 <input type = 'text' name = 'option2'><br>
 <input type = 'text' name = 'option3'><br>
 <input type = 'text' name = 'option4'><br>
 
 <input type = 'submit' value = "Submit">
-
-</form>
+</center>
+</form2>
 
 
 </body>

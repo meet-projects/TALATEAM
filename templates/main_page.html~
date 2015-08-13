@@ -10,7 +10,13 @@
 </head>
 
 <body>
+<<<<<<< HEAD
+<h1 id = "one"> TypicalFace</h1>
+<img src="TYPICALFACE.xcf" alt="Our logo">
+  
+=======
 <h1 id = "one"> TypicalFace</h1>  
+>>>>>>> bffd08f02d97d6c31eb139c19993f657285ed528
 
 
 
