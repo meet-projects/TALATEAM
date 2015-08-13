@@ -1,0 +1,18 @@
+
+body{
+background: url("http://www.magic4walls.com/wp-content/uploads/2014/01/texture-blue-fonchik-simple-dark-colors-glow-background.jpg");
+    background-size: cover
+
+}
+
+h1{
+color : #FFFFCC;
+text-align: center;
+font-size: 400% ; 
+}
+p{
+color : #FFFFB8; 
+text-align: center;
+font-size: 130%;
+font-family: "Courier New", Courier, monospace;
+}

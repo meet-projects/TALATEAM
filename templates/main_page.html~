@@ -10,7 +10,9 @@
 </head>
 
 <body>
-<h1 id = "one"> TypicalFace:</h1>  
+<h1 id = "one"> TypicalFace</h1>
+<img src="TYPICALFACE.xcf" alt="Our logo">
+  
 
 
 
