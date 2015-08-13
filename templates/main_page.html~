@@ -26,7 +26,8 @@
 
 
 
-<p> <a href = "{{url_for('showProfiles')}}"> DELETE/EDIT</a>
+<p> <a href = "{{url_for('showProfiles')}}"> DELETE/EDIT</a> <br>
+<a href = "{{url_for('about')}}">About Us</a>
 </body>
 
 
