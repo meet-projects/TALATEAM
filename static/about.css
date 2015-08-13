@@ -8,15 +8,56 @@ padding-top: 40px;
 #one
 {
 text-align:center;
-font-size:60px;
-color:#90EE90;
+font-size:30px;
+background-color:#90EE90;
 }
 
-#one
+#two
 {
 text-align:center;
-font-size:60px;
-color:#B0C4DE;
+font-size:30px;
+background-color:#FFA07A;
+}
+
+#x
+{
+text-align:center;
+font-size:55px;
+color:white;
+}
+
+#x2
+{
+text-align:left;
+font-size:35px;
+color:white;
+}
+#x3
+{
+text-align:left;
+font-size:35px;
+color:white;
+}
+
+#four
+{
+text-align:center;
+font-size:30px;
+background-color:#87CEFA;
+}
+.IMAGE
+{
+margin-left: 0px;
+-webkit-transition: margin 1s ease;
+-moz-transition: margin 1s ease;
+-o-transition: margin 1s ease;
+-ms-transition: margin 1s ease;
+transition: margin 1s ease;
+}
+
+.IMAGE:hover
+{
+margin-left: -200px;;
 }
 
 #five
