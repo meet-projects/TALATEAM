@@ -1,44 +1,59 @@
 <html>
+<head>
+<title>
+TALATEAM/meet-projects
+</title>
+<link rel=stylesheet type=text/css href="{{url_for('static', filename='about.css')}}">
+<link rel=stylesheet type=text/css href="../static/about.css">
+</head>
 <body>
 <div>
-<h1>
+<h1 id = "x">
 About Us
 </h1>
 </div>
-<div>
-<h3>
-The Developers:
-</div>
-</h3>
+
+
+
+
 <div id = "one">
-<p class = "PER"> 
- <img src="" alt="Developers" style="width:300px;height:400px;">  <br>
-{{names by order}} <br>
-Hila: "You only live once - so think twice." <br>
-Bakir: <br>
-Amitai:<br>
-Tala:<br>
-Inbal:<br>
-</p>
+  <p class = "PER"> 
+  <div class = "IMAGE">
+    <img src="{{url_for('static', filename='groupPicture.png')}}" alt="Developers" style="width:400px;height:400px;">  
+   </div> <br>
+  <br>
+  😆 Hila: "You only live once - so think twice" <br>
+  😒 Bakir: "We are greater than the sum of our parts" <br>
+  Amitai: "Education is the key for everything"<br>
+ 😇 Tala: "Life goes on within you or without you" <br>
+ 😸 Inbal: "Do not take life too seriosly. You will never get out of it alive"
+<br>
+  </p>
 </div >
 <div id = "two">
+<h3 id = "x2">
+The Developers:
+</h3>
 <p class = "PER">
 
 TypicalFace was created by five meet studants as their final summer project.
 We, in TypicalFace have found a reaccuring problem in our everyday life: stereotypes. And so, we created TypicalFace.
 
 </p>
-</div id=2>
-<div id = "three">
-<h3>
+</div>
+
+<div id = "four">
+<h3 id = "x3">
 The Website:
 </h3>
-</div>
-<div id = "four">
 <p class = "PER">
 TypicalFace was created to help people be more aware to their use of stereotypes. <br> 
-Stereotypes are a natural occuring 
+Stereotypes are a natural occuring thing, that help us remeber peple more quickly and efficiently. The problem starts when we use stereotypes insted of getting to know the person. This leads to people not getting hired, just because of their skin color. People are not allowed to go to a certain school becasue of their heritage. People being overlooked and abused.<br>
+We in TypicalFace, are going to try and stop this.In our websitw, people of all genders, religions and ethnicities can upload a picture of themselves. other users can try and decide what is the correct answer to that question. in order to succeed, our users have to stop thinking in stereotypes and see a person as he truely is. <br>
+We hope, that TypicalFace will change the way that our society looks at people who are "different". 
+
+TypicalFace - Break The Fourth Wall.
 </p>
-</div id=4>
+</div>
 </body>
 </html>

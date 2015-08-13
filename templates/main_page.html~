@@ -10,7 +10,17 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 <div id= "firs_div">
+=======
+<<<<<<< HEAD
+<h1 id = "one"> TypicalFace</h1>
+<img src="TYPICALFACE.xcf" alt="Our logo">
+  
+=======
+<h1 id = "one"> TypicalFace</h1>  
+>>>>>>> bffd08f02d97d6c31eb139c19993f657285ed528
+>>>>>>> 04a7ddbbb807dfabe5e3be48c8338a671c71fc0d
 
 <h1 id = "one"> TypicalFace</h1>  
 </div>
@@ -30,10 +40,15 @@
 
 
 
+<<<<<<< HEAD
 <p> <a href = "{{url_for('showProfiles')}}"> DELETE</a> <br>
 <a href = "{{url_for('about')}}">About Us</a>
 <br>
 <img id = "logo" src="{{ url_for('static', filename='logo-transp.gif') }}">
+=======
+<p> <a href = "{{url_for('showProfiles')}}"> DELETE/EDIT</a> <br>
+<a href = "{{url_for('about')}}">About Us</a>
+>>>>>>> 04a7ddbbb807dfabe5e3be48c8338a671c71fc0d
 </body>
 
 

@@ -1,21 +1,24 @@
 <html>
 <head>
 <title>RANDOM profile</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='takeQuiz.css') }}">
 </head>
 <body>
 <h1 id = "mainh"> Time To Vote </h1>
+<p>
 <img src="{{user.picURL}}" alt="person">
+</p>
 <br>
 <form action = "{{url_for('viewProfile',user_id = user.id)}}"method = "POST">
 <p> What does this person do for a living? </p> <br>
-
+<p>
 <input type="radio" name="answer" value="a">{{question.option_a}}<br>
 <input type="radio" name="answer" value="b">{{question.option_b}}<br>
 <input type="radio" name="answer" value="c">{{question.option_c}}<br>
 <input type="radio" name="answer" value="d">{{question.option_d}}<br>
 
 <input type="submit" value="Check">
-
+</p>
 
 </form>
 

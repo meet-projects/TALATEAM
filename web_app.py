@@ -30,9 +30,23 @@ def viewProfile(user_id):
 
 		ans = request.form['answer']
 		if ans == 'a':
+			question.counter_a +=1
+			session.commit()
 			return render_template('correctAnswer.html', user=user, question=question)
-		else:
+		elif ans == 'b':
+			question.counter_b += 1
+			session.commit()
 			return render_template('incorrectAnswer.html' , user=user , question=question)
+		elif ans == 'c':
+			question.counter_c += 1
+			session.commit()
+			return render_template('incorrectAnswer.html' , user=user , question=question)
+		elif ans == 'd':
+			question.counter_d += 1
+			session.commit()
+			return render_template('incorrectAnswer.html' , user=user , question=question)
+
+			
 		
 			
 
