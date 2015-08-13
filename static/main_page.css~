@@ -4,6 +4,10 @@ body {
     background-repeat: no-repeat;
     padding-top: 40px;
 }
+#first_div
+{
+background-color:white;
+}
 
 .REPLACEMENT-PIC
  {
@@ -16,7 +20,6 @@ body {
 }
 a {
 color: white;
-text-align:center;
 font-size:20px;
 
 }
@@ -26,4 +29,10 @@ font-size:60px;
 color:white;
 }
 
+#logo{
+width : 500px;
+height : 350px;
+margin:0 auto;
+position:relative;
+}
 

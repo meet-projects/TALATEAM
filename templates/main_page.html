@@ -10,12 +10,15 @@
 </head>
 
 <body>
+<div id= "firs_div">
+
 <h1 id = "one"> TypicalFace</h1>  
+</div>
 
-
+<br>
+ 
 
 <a href = "{{url_for('makeANewProfile')}}">Make A New Profile</a>
-
 {% for user in users %}
 <div> 
 <a href= "{{url_for('viewProfile', user_id = user.id)}}">
@@ -23,11 +26,10 @@
 </a>
 </div>
 {% endfor %} 
-
-
-
-<p> <a href = "{{url_for('showProfiles')}}"> DELETE/EDIT</a> <br>
+<p> <a href = "{{url_for('showProfiles')}}"> DELETE</a> <br>
 <a href = "{{url_for('about')}}">About Us</a>
+<br>
+<img id = "logo" src="{{ url_for('static', filename='logo-transp.gif') }}">
 </body>
 
 

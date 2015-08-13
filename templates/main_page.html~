@@ -10,9 +10,13 @@
 </head>
 
 <body>
+<div id= "firs_div">
+
 <h1 id = "one"> TypicalFace</h1>  
+</div>
 
-
+<br>
+ 
 
 <a href = "{{url_for('makeANewProfile')}}">Make A New Profile</a>
 
@@ -26,7 +30,10 @@
 
 
 
-<p> <a href = "{{url_for('showProfiles')}}"> DELETE/EDIT</a>
+<p> <a href = "{{url_for('showProfiles')}}"> DELETE</a> <br>
+<a href = "{{url_for('about')}}">About Us</a>
+<br>
+<img id = "logo" src="{{ url_for('static', filename='logo-transp.gif') }}">
 </body>
 
 
