@@ -27,24 +27,13 @@ def viewProfile(user_id):
 	if request.method == 'GET':
 		return render_template('takeQuiz.html', question = question, user = user)	
 	elif request.method == 'POST':
-		form_response = request.form['answer']
 
 		ans = request.form['answer']
 		if ans == 'a':
-			question.counter_a += 1
-		elif ans == 'b':
-			question.counter_b += 1
-		elif ans == 'c':
-			question.counter_c += 1
-		elif ans == 'd':
-			question.counter_d += 1
-		session.commit()
-
-
-		if form_response == question.correct_option:
-			return render_template('correctAnswer.html', user = user, question = question, counter_a= question.counter_a, 				counter_b= question.counter_b, counter_c= question.counter_c, counter_d= question.counter_d)
+			return render_template('correctAnswer.html', user=user, question=question)
 		else:
-			return render_template('incorrectAnswer.html', user = user, question = question, counter_a= question.counter_a, 				counter_b= question.counter_b, counter_c= question.counter_c, counter_d= question.counter_d)
+			return render_template('incorrectAnswer.html' , user=user , question=question)
+		
 			
 
 @app.route('/profile/new', methods = ['GET', 'POST'])
@@ -60,7 +49,7 @@ def makeANewProfile():
 		newUser = User(name =  name, picURL = pic, description = description)
 		session.add(newUser)	
 		session.commit()
-		question = Question(user_id = newUser.id, text = "What do you do for a living?", option_a = request.form['option1'], option_b = request.form['option2'], option_c = request.form['option3'], option_d = request.form['option4'], correct_option = request.form['option1'])
+		question = Question(user_id = newUser.id, text = "What do you do for a living?", option_a = request.form['option1'], option_b = request.form['option2'], option_c = request.form['option3'], option_d = request.form['option4'], counter_a=0,  counter_b=0,  counter_c=0 , counter_d=0 )
 		session.add(question)
 		session.commit()
 		return redirect(url_for('main'))
@@ -111,6 +100,9 @@ def deleteProfile(profile_id):
 
 
 
-
+@app.route('/about')
+def about():
+	return render_template('about.html')
+	
 if __name__ == '__main__':
     app.run(debug=True)

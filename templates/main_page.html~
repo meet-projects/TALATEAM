@@ -10,9 +10,13 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 <h1 id = "one"> TypicalFace</h1>
 <img src="TYPICALFACE.xcf" alt="Our logo">
   
+=======
+<h1 id = "one"> TypicalFace</h1>  
+>>>>>>> bffd08f02d97d6c31eb139c19993f657285ed528
 
 
 
@@ -20,7 +24,7 @@
 
 {% for user in users %}
 <div> 
-<a href= "{{url_for('viewProfile', profile_id = user.id)}}">
+<a href= "{{url_for('viewProfile', user_id = user.id)}}">
 <img src="{{user.picURL}}">
 </a>
 </div>

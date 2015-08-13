@@ -1,0 +1,30 @@
+body {
+background-color:black;
+background-size: cover;
+background-repeat: no-repeat;
+padding-top: 40px;
+}
+
+#one
+{
+text-align:center;
+font-size:60px;
+color:#90EE90;
+}
+
+#one
+{
+text-align:center;
+font-size:60px;
+color:#B0C4DE;
+}
+
+#five
+{
+text-align:right;
+}
+
+.PER
+{
+color: white;
+}
