@@ -26,12 +26,17 @@ class User(Base):
 
 class Question(Base):
 	__tablename__ = 'question'
-	option_a = Column(String)
+	option_a = Column(String) # a is always the correct answer
 	option_b = Column(String)
 	option_c = Column(String)
 	option_d = Column(String)
-	text = Column(String)
-	correct_option = Column(String) 
+	counter_a= Column(Integer)
+	counter_b= Column(Integer)
+	counter_c= Column(Integer)
+	counter_d= Column(Integer)
+
+
+	text = Column(String) 
 	id = Column(Integer, primary_key = True)
 	user_id = Column(Integer, ForeignKey("user.id"))
 	user = relationship(User)
